@@ -1,7 +1,9 @@
 # SQL-files
 SQL codes showing my competencies as an SQL professional
 ## This is the SQL code showing various SQL queries on my LITA Database
-
+CREATE TABLE 
+---
+```
 CREATE TABLE Employee (
 staffid varchar (10) not null,
 FirstName varchar (255) NOT NULL,
@@ -11,8 +13,15 @@ Date_of_Birth date,
 HireDate datetime,
 primary key (staffid)
 )
-select * from Employee;
-
+```
+**VIEW TABLE**
+---
+```
+Select * from Employee;
+```
+ADD RECORD TO A TABLE
+---
+```
 insert into Employee (staffid, firstname, secondname, gender,Date_of_Birth, hiredate)
 values ( 'AB401', 'ayan', 'olakun', 'female', '1992-08-22', '2018-02-09'),
 ( 'AB212', 'okorie', 'mercy', 'female','1988-10-09', '2018-10-09'),
@@ -23,6 +32,8 @@ values ( 'AB401', 'ayan', 'olakun', 'female', '1992-08-22', '2018-02-09'),
 ( 'AB298', 'ayomide', 'halleluyah', 'female', '1982-10-09','2018-07-11'),
 ( 'AB260', 'deborah', 'justin', 'female','1982-10-09', '2018-02-09'),
 ( 'AB281', 'wale', 'olanipekun', 'male','1982-10-09', '2018-02-09')
+```
+
 
 -------to drop table --------
 
