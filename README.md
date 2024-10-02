@@ -1,6 +1,6 @@
 # SQL-files
 SQL codes showing my competencies as an SQL professional
-## This is the SQL code showing various SQL queries on my LITA Database
+## These are my SQL codes showing various SQL queries executed by me on my LITA Database
 CREATE TABLE 
 ---
 ```
@@ -20,7 +20,12 @@ primary key (staffid)
 Select * from Employee;
 ```
 ADD RECORD TO A TABLE
+The following syntax allows you to insert a new record into a table
 ---
+```
+INSERT INTO table_name (column1, column2, column3, ...)
+VALUES (value1, value2, value3, ...);
+```
 ```
 insert into Employee (staffid, firstname, secondname, gender,Date_of_Birth, hiredate)
 values ( 'AB401', 'ayan', 'olakun', 'female', '1992-08-22', '2018-02-09'),
@@ -35,35 +40,27 @@ values ( 'AB401', 'ayan', 'olakun', 'female', '1992-08-22', '2018-02-09'),
 ```
 
 
--------to drop table --------
-
+TO DROP TABLE
+---
+```
 drop table employee
-
-----delete sql command--
-
+```
+TO DELETE SQL COMMAND
+---
+```
 delete from employee
 where staffid  = 'ab281'
+```
 
------truncate sql command
+## TO TRUNCATE SQL COMMAND
+### truncate table deletes all the data in the table but retains the table structure. Whereas, drop table deletes the table in its entirety
+```
+truncate table employee
+```
 
-truncate table employee  
-
------identity in SQL -----
-
-
-
-select * from PERSON
-
-
-( 'AB240', 'johnson', 'mercy', 'female','1982-10-09', '2019-12-09'),
-( 'AB299', 'ayomide', 'halleluyah', 'female', '1982-10-09','2018-07-11'),
-( 'AB268', 'deborah', 'justin', 'female','1982-10-09', '2018-02-09'),
-( 'AB286', 'wale', 'olanipekun', 'male','1982-10-09', '2018-02-09'),
-( 'AB270', 'shukurat', 'lasisi', 'female','1982-10-09', '2018-02-09')
-
-select * from Employee
-
----- to create second table call SALARY TABLE-------
+## identity/ Autoincrement in SQL
+---
+```
 CREATE TABLE Salary (
 salary_id int AUTO_INCREMENT primary key not null,
 Staffid varchar (255),
@@ -72,25 +69,23 @@ lastname varchar (255),
 department varchar(255),
 salary decimal (10, 3) 
 )
+```
 
-select * from Salary
+# SUM, COUNT, MAX, MIN, AVERAGE
 
------insert records into Salary table-------------
-
-insert into salary (staffid, FirstName, lastname, Department, Salary)
-
-
-
-----SUM, COUNT, MAX, MIN, AVERAGE---------------------------------
 
 SELECT SUM(Salary) AS TOTALSALARY FROM Salary
 ----I want to know the totls
+
+```
 SELECT AVG(Salary) AS AVERAGESALARY FROM Salary
-
+```
+```
 SELECT COUNT(Staffid) AS EmployeeCount FROM EMPLOYEE
-
+```
+```
 SELECT COUNT(Staffid) AS NumberOfEmployee FROM Salary
-
+```
 -----update--------
 
 UPDATE Salary
